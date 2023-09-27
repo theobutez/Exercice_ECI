@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Liste des films</h1>
+<ul>
+    {% for picture in pictures %}
+    <li>
+        <a href="/picture/{{ picture.id }}">{{ picture.title }}</a> réalisé par {{ picture.director }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
